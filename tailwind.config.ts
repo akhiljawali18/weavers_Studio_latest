@@ -53,7 +53,11 @@ const config: Config = {
                 EaseInOut: "lineDisc 1s infinite",
                 Wiggle: "wiggle 1s ease-in-out",
                 FadeInOut: "FadeIn 1s infinite",
-                TextAnimate: "TextAnimate 1s infinite"
+                TextAnimate: "TextAnimate 1s infinite",
+                // Sarong to Sari links: gaps running along the underline like a stitch.
+                stitch: "stitch 0.6s linear infinite",
+                // Sarong to Sari header: the cart icon swells and settles back after "add to cart".
+                cartPulse: "cartPulse 0.6s ease-in-out"
             },
             keyframes: {
                 wiggle: {
@@ -63,6 +67,15 @@ const config: Config = {
                 TextAnimate: {
                     "0%, 100%": { backgroundPosition: "0% 50%" },
                     "50%": { backgroundPosition: "100% 50%" }
+                },
+                stitch: {
+                    from: { maskPosition: "0 0" },
+                    to: { maskPosition: "64px 0" }
+                },
+                cartPulse: {
+                    "0%, 100%": { transform: "scale(1)" },
+                    "35%": { transform: "scale(1.45)" },
+                    "65%": { transform: "scale(0.92)" }
                 }
             },
             gridTemplateColumns: {
@@ -118,6 +131,22 @@ const config: Config = {
                 },
                 placeholder: {
                     DEFAULT: "hsl(var(--placeholder))"
+                },
+                // Sarong to Sari microsite palette, taken from the Figma file's named styles.
+                s2s: {
+                    maroon: "#6a151c",
+                    brown: "#7f665b",
+                    ink: "#444444",
+                    muted: "#666666",
+                    gray: "#737373",
+                    soft: "#999999",
+                    line: "#aaaaaa",
+                    panel: "#f8f8f8",
+                    tan: "#a39385",
+                    gold: "#cd8c3f",
+                    sand: "#c3af9d",
+                    mist: "#f1f1f1",
+                    paper: "#fbfbfb"
                 }
             },
             borderRadius: {
