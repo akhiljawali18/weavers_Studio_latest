@@ -1,5 +1,26 @@
 {
   "pages": {
+    "/sarong-to-sari/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/page.js"
+    ],
+    "/sarong-to-sari/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/sarong-to-sari/layout.css",
+      "static/chunks/app/sarong-to-sari/layout.js"
+    ],
+    "/sarong-to-sari/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/loading.js"
+    ],
+    "/sarong-to-sari/not-found": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/not-found.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
