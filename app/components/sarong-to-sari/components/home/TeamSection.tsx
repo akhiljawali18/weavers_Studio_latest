@@ -38,8 +38,8 @@ const TeamSection = () => (
       <Carousel
         label="The Sarong to Sari team"
         itemLabel="team member"
-        showNav={false}
         trackClassName="gap-5 scroll-pl-5 px-5 lg:scroll-pl-5 lg:pl-5 lg:pr-0"
+        navClassName="mt-[30px] lg:mt-[21px]"
       >
         {team.map((member) => (
           <article

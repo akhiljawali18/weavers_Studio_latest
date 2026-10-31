@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import ImageSlot from "./ImageSlot";
 import { S2S_ASSETS } from "../../data/home";
+import { useSoloVideo } from "../../hooks/useSoloVideo";
 import type { SnippetVideo } from "../../data/home";
 
 type VideoCardProps = SnippetVideo & {
@@ -26,11 +27,14 @@ const VideoCard = ({
   const [playing, setPlaying] = useState(false);
   const [failed, setFailed] = useState(false);
   const playable = Boolean(src) && !failed;
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useSoloVideo(videoRef, playing && playable);
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {playing && playable ? (
         <video
+          ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
           src={src}
           poster={poster}

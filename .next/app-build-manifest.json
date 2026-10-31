@@ -1,15 +1,15 @@
 {
   "pages": {
+    "/sarong-to-sari/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/sarong-to-sari/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/sarong-to-sari/page.js"
     ],
     "/sarong-to-sari/layout": [
       "static/chunks/webpack.js",
@@ -26,6 +26,31 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/sarong-to-sari/not-found.js"
+    ],
+    "/sarong-to-sari/the-journey/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/the-journey/page.js"
+    ],
+    "/sarong-to-sari/community-archive/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/community-archive/page.js"
+    ],
+    "/sarong-to-sari/programme/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/programme/page.js"
+    ],
+    "/sarong-to-sari/voices/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/voices/page.js"
+    ],
+    "/sarong-to-sari/community-archive/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/sarong-to-sari/community-archive/[slug]/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",

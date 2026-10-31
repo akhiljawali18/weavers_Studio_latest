@@ -4,6 +4,8 @@ import ImageSlot from "./ImageSlot";
 import RichText from "./RichText";
 import Testimonials from "./Testimonials";
 import VideoCard from "./VideoCard";
+import { S2S_ASSETS } from "../../data/home";
+
 import {
   communityArchive,
   testimonialsTitle,
@@ -34,11 +36,19 @@ const CommunitySection = () => (
         height={20}
         className="left-0 top-[45px] lg:block hidden"
       />
-      <Decoration
-        file="testi-decor.png"
+      {/* <Decoration
+        file=""
         width={390}
         height={20}
         className="left-0 top-[50px] lg:hidden block"
+      /> */}
+      <img
+        width={390}
+        height={20}
+        className="lg:hidden block pointer-events-none"
+        src={`${S2S_ASSETS}/testi-decor.png`}
+        alt=""
+        aria-hidden
       />
     </div>
 

@@ -48,3 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
+
+# Site media in public/images is served by the app, so it must be committed
+!public/images/**

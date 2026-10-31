@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ImageSlot from "./ImageSlot";
 import { S2S_ASSETS } from "../../data/home";
+import { useSoloVideo } from "../../hooks/useSoloVideo";
 
 type HeroVideoProps = {
   /** The landscape film shown from `lg` up. */
@@ -40,6 +41,7 @@ const HeroVideo = ({ src, mobileSrc, poster }: HeroVideoProps) => {
   // The portrait film on phones, the landscape one from `lg`; kept in sync if the
   // viewport crosses the breakpoint.
   const [activeSrc, setActiveSrc] = useState(src);
+  useSoloVideo(videoRef, load && Boolean(activeSrc));
 
   useEffect(() => {
     const wide = window.matchMedia("(min-width: 1024px)");

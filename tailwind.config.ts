@@ -57,7 +57,11 @@ const config: Config = {
                 // Sarong to Sari links: gaps running along the underline like a stitch.
                 stitch: "stitch 0.6s linear infinite",
                 // Sarong to Sari header: the cart icon swells and settles back after "add to cart".
-                cartPulse: "cartPulse 0.6s ease-in-out"
+                cartPulse: "cartPulse 0.6s ease-in-out",
+                // The journey map: dashes travelling along the crossing being read.
+                march: "march 1.4s linear infinite",
+                // The journey map: the dashed ring round the current stop, turning slowly.
+                "spin-slow": "spin 14s linear infinite"
             },
             keyframes: {
                 wiggle: {
@@ -76,6 +80,10 @@ const config: Config = {
                     "0%, 100%": { transform: "scale(1)" },
                     "35%": { transform: "scale(1.45)" },
                     "65%": { transform: "scale(0.92)" }
+                },
+                march: {
+                    from: { strokeDashoffset: "0" },
+                    to: { strokeDashoffset: "-16" }
                 }
             },
             gridTemplateColumns: {
@@ -146,7 +154,9 @@ const config: Config = {
                     gold: "#cd8c3f",
                     sand: "#c3af9d",
                     mist: "#f1f1f1",
-                    paper: "#fbfbfb"
+                    paper: "#fbfbfb",
+                    // The deeper red "The Journey" sets its dates in.
+                    wine: "#7c1126"
                 }
             },
             borderRadius: {

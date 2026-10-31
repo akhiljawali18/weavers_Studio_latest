@@ -50,34 +50,34 @@ const VoyageSection = () => (
     {/* On phones the first paragraph is indented beside a ruled line that ends in
         the wave ornament, and the second runs full width beneath it. */}
     <div
-      className={`relative flex flex-col gap-[37px] lg:min-h-[411px] lg:flex-row lg:gap-[14.29%] lg:pl-[35.28%] lg:pr-[10.28%] lg:pt-[123px] ${
+      className={`relative flex flex-col gap-[37px] lg:min-h-[411px] lg:flex-row lg:gap-[50px] lg:pl-[35.28%] lg:pr-[10.28%] lg:pt-[123px] ${
         hiddenOnMobile.voyagePortrait ? "pt-[58px]" : "pt-10"
       }`}
     >
       {/* The ruled margin with the wave ornament at its foot (desktop only). */}
       <Decoration
         file="deco-voyage-wave.svg"
-        width={745}
+        width={700}
         height={377}
         className="left-0 top-[35px] hidden lg:block"
       />
       {/* The two columns split the width evenly, as in the design. Between 1200 and
           1439px the second paragraph, which is a little longer, gets 51% so the two
           still end on the same line there. */}
-      <div className="relative min-h-[350px] pl-[92px] pr-[28px] lg:min-h-0 lg:flex-1 lg:p-0 xl:flex-[49_1_0%] min-[1440px]:flex-1">
+      <div className="relative min-h-[350px] pl-[92px] pr-[15px] lg:min-h-0 lg:flex-1 lg:p-0 xl:flex-[49_1_0%] min-[1440px]:flex-1">
         <Decoration
           file="deco-voyage-wave.svg"
-          width={560}
-          height={470}
-          className="-left-[78px] top-0 lg:hidden"
+          width={520}
+          height={420}
+          className="-left-[78px] top-[30px] lg:hidden"
         />
-        <p className={`relative lg:text-justify ${bodyText}`}>
+        <p className={`relative ${bodyText}`}>
           <RichText content={firstParagraph} />
         </p>
       </div>
       {/* Both paragraphs are justified on desktop, so their right edges line up. */}
       <p
-        className={`pl-[17px] pr-[28px] lg:flex-1 lg:p-0 lg:text-justify xl:flex-[51_1_0%] min-[1440px]:flex-1 ${bodyText}`}
+        className={`pl-[17px] pr-[28px] lg:flex-1 lg:p-0 xl:flex-[51_1_0%] min-[1440px]:flex-1 ${bodyText}`}
       >
         <RichText content={secondParagraph} />
       </p>

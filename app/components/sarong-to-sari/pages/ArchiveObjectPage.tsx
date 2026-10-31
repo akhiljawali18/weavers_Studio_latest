@@ -84,7 +84,7 @@ const ArchiveObjectPage = ({ object }: ArchiveObjectPageProps) => (
         >
           Object details
         </h2>
-        <div className="relative mt-[38px] flex flex-col gap-8 lg:flex-row lg:gap-[107px] lg:pl-[27px]">
+        <div className="relative mt-[38px] flex flex-col gap-[50px] lg:flex-row lg:gap-[107px] lg:pl-[27px]">
           {/* On phones the round paisley sits in the gutter the summary's indent leaves to its left. */}
           <Decoration
             file="decorCommu-1.svg"

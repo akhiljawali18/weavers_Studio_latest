@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { MicrositeProgrammePage } from "../../components/sarong-to-sari";
-import { GET_ALL_ITEMS } from "@/app/api/home/route";
-import notFound from "../not-found";
+import { notFound } from "next/navigation";
+// The programme needs the main site's API, which this repo does not have yet. See
+// docs/missing-main-site-code.md before switching this page back on.
+// import { MicrositeProgrammePage } from "../../components/sarong-to-sari";
+// import { GET_ALL_ITEMS } from "@/app/api/home/route";
 
 export const metadata: Metadata = {
     title: "Weavers Studio | Programme",
@@ -10,16 +12,18 @@ export const metadata: Metadata = {
 };
 
 export default async function ProgrammeRoutePage() {
-    const filter = JSON.stringify({
-        _and: [{ status: { _eq: "Active" } }, { Is_Ticket: { _eq: "yes" } }]
-    });
-    const ALL_TICKETS = await GET_ALL_ITEMS("products", filter);
+    notFound();
 
-    if (!ALL_TICKETS?.data || ALL_TICKETS?.data.length === 0) {
-        notFound();
-    }
+    // const filter = JSON.stringify({
+    //     _and: [{ status: { _eq: "Active" } }, { Is_Ticket: { _eq: "yes" } }]
+    // });
+    // const ALL_TICKETS = await GET_ALL_ITEMS("products", filter);
 
-    const sortedTickets = [...ALL_TICKETS.data]?.sort((a, b) => Number(a?.id ?? 0) - Number(b?.id ?? 0));
+    // if (!ALL_TICKETS?.data || ALL_TICKETS?.data.length === 0) {
+    //     notFound();
+    // }
 
-    return <MicrositeProgrammePage allTickets={sortedTickets} />;
+    // const sortedTickets = [...ALL_TICKETS.data]?.sort((a, b) => Number(a?.id ?? 0) - Number(b?.id ?? 0));
+
+    // return <MicrositeProgrammePage allTickets={sortedTickets} />;
 }
